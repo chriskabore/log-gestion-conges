@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     this.login = this.formLogin.value as Login;
     this.authService.authenticate(this.login).subscribe({
       next: value =>{
-        this.router.navigateByUrl('/pages');
+        this.router.navigate(['/pages']);
         //console.log(value);
       },
       error: err =>{
