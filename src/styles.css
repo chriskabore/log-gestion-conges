@@ -3,7 +3,18 @@
 
 .main{
     height: 100vh;
-    background-color: darkblue;
+    background-color: white;
+}
+
+.login-form-content{
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+
+.login-form-img{
+    width: 150px;
+    height: 150px;
+
 }
 
 /*  table pour demandes et agents*/
