@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DemandeService } from '../../../../services/demande.service';
+import { Demande } from '../../../../models/demande.model';
 
 @Component({
   selector: 'app-list-demandes',
@@ -8,6 +9,8 @@ import { DemandeService } from '../../../../services/demande.service';
 })
 export class ListDemandesComponent implements OnInit {
 
+  demandes?: Demande[];
+  
   constructor(
     private demandeService: DemandeService
   ){
@@ -21,8 +24,9 @@ export class ListDemandesComponent implements OnInit {
   //charge la liste des données
   getDemandes(){
    this.demandeService.getDemandes().subscribe({
-  next: value =>{
-    console.log(value);
+  next: data =>{
+    this.demandes = data;
+    console.log(data);
   }, 
   error: err =>{
     console.log(err);

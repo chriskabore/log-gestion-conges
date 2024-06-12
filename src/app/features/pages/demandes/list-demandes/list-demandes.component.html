@@ -1,31 +1,43 @@
-<table class="table table-striped" style="width:100%">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Agents</th>
-            <th>Motif</th>
-            <th>Date de debut</th>
-            <th>Date de fin</th>
-            <th>Etat</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-       <!-- <tr *ngFor="let d of demandes; index as i">
-            
-            <td>{{i+1}}</td>
-            <td>{{d.agent?.matricule +' - '+ d.agent?.nom + '-' d.agent?.prenom}}</td>
-            <td>{{d.motif}}</td>
-            <td>{{d.dateDebut}}</td>
-            <td>{{d.dateFin}}</td>
-            <td>{{d.etat}}</td>
-            <td>
-                <button class="btn btn-outline-warning">Voir</button>
-                <button class="btn btn-outline-danger">Modifier</button>
-            </td>
-            
-              
-            
-        </tr>-->
-    </tbody>
-</table>
+
+<div class="card mt-4">
+    <div class="card-header py-3">
+        <h5>Liste des demandes</h5>
+    </div>
+    <div class="card-body">
+        <a href="#" class="btn btn-primary btn-sm my-2"><i
+            class="bi bi-plus-circle mx-1"></i>Faire une demande</a>
+        <table class="table custab" style="width:100%">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Agents</th>
+                    <th>Motif</th>
+                    <th>Date de debut</th>
+                    <th>Date de fin</th>
+                    <th>Etat</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let d of demandes; index as i">
+                    
+                    <td>{{i+1}}</td>
+                    <td>{{d.agent?.matricule +' - '+d.agent?.nom + ' - '+d.agent?.prenom}}</td>
+                    <td>{{d.motif}}</td>
+                    <td>{{d.dateDebut}}</td>
+                    <td>{{d.dateFin}}</td>
+                    <td>{{d.etat}}</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm mx-2"><i class="bi bi-eye mx-1"></i>Voir</button>
+                        <button class="btn btn-success btn-sm mx-2"><i class="bi bi-pencil-square mx-1"></i> Modifier</button>
+                        <button class="btn btn-danger btn-sm mx-2"><i class="bi bi-trash mx-1"></i> Supprimer</button>
+                    </td>
+                    
+                      
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

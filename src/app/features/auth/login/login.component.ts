@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
       next: value =>{
         this.authService.saveToken(value.id_token!);
         this.router.navigate(['/pages']);
+        console.log("User is logged in");
         //console.log(value);
       },
       error: err =>{
