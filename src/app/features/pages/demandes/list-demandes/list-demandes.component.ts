@@ -7,6 +7,7 @@ import { DemandeService } from '../../../../services/demande.service';
   styleUrl: './list-demandes.component.css'
 })
 export class ListDemandesComponent implements OnInit {
+
   constructor(
     private demandeService: DemandeService
   ){
@@ -17,6 +18,7 @@ export class ListDemandesComponent implements OnInit {
     this.getDemandes();
   }
 
+  //charge la liste des données
   getDemandes(){
    this.demandeService.getDemandes().subscribe({
   next: value =>{

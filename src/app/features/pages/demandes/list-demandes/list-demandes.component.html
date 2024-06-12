@@ -11,16 +11,21 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th>2</th>
-            <td>jkjj</td>
-            <td>jkj</td>
-            <td>lkl</td>
-            <td>mmlml</td>
-            <td>mlmlml</td>
-            <td>popoop</td>
+       <!-- <tr *ngFor="let d of demandes; index as i">
+            
+            <td>{{i+1}}</td>
+            <td>{{d.agent?.matricule +' - '+ d.agent?.nom + '-' d.agent?.prenom}}</td>
+            <td>{{d.motif}}</td>
+            <td>{{d.dateDebut}}</td>
+            <td>{{d.dateFin}}</td>
+            <td>{{d.etat}}</td>
+            <td>
+                <button class="btn btn-outline-warning">Voir</button>
+                <button class="btn btn-outline-danger">Modifier</button>
+            </td>
+            
               
             
-        </tr>
+        </tr>-->
     </tbody>
 </table>

@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
     this.login = this.formLogin.value as Login;
     this.authService.authenticate(this.login).subscribe({
       next: value =>{
+        this.authService.saveToken(value.id_token!);
         this.router.navigate(['/pages']);
         //console.log(value);
       },
