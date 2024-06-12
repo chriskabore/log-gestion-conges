@@ -7,6 +7,10 @@ const routes: Routes = [
     path:'', 
     component: ContentLayoutComponent,
   }, 
+  {
+    path: 'demandes',
+    loadChildren: ()=>import('../pages/demandes/demandes.module').then(m=>m.DemandesModule),
+  }
 ];
 
 @NgModule({
