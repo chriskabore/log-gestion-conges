@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DemandeService } from '../../../../services/demande.service';
 import { Demande } from '../../../../models/demande.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-demandes',
@@ -12,7 +13,8 @@ export class ListDemandesComponent implements OnInit {
   demandes?: Demande[];
   
   constructor(
-    private demandeService: DemandeService
+    private demandeService: DemandeService, 
+    private router: Router,
   ){
 
   }
@@ -33,5 +35,12 @@ export class ListDemandesComponent implements OnInit {
   }
 });
 
+  }
+
+  showDemande(id:number|undefined ):void{
+    if(id !== undefined){
+      this.router.navigate(["/pages/demandes/preview", id]);
+    }
+    
   }
 }
