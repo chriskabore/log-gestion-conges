@@ -42,9 +42,7 @@ export class DetailsDemandesComponent  implements OnInit{
     this.router.navigate(['/pages/demandes']);
   }
 
-  deleteDemande(){
-    
-  }
+  
   
 
 

@@ -4,7 +4,7 @@
         <h5>Liste des demandes</h5>
     </div>
     <div class="card-body">
-        <a href="#" class="btn btn-primary btn-sm my-2"><i
+        <a href="#" class="btn btn-primary btn-sm my-2" (click)="openEditDemande()"><i
             class="bi bi-plus-circle mx-1"></i>Faire une demande</a>
         <table class="table custab" style="width:100%">
             <thead>
@@ -29,7 +29,7 @@
                     <td>{{d.etat}}</td>
                     <td>
                         <button class="btn btn-warning btn-sm mx-2" (click)="showDemande(d.id)"><i class="bi bi-eye mx-1"></i>Voir</button>
-                        <button class="btn btn-success btn-sm mx-2"><i class="bi bi-pencil-square mx-1"></i> Modifier</button>
+                        <button class="btn btn-success btn-sm mx-2"><i class="bi bi-pencil-square mx-1" (click)="openEditDemande(d)"></i> Modifier</button>
                         <button class="btn btn-danger btn-sm mx-2" (click)="deleteDemande(d.id)"><i class="bi bi-trash mx-1"></i> Supprimer</button>
                     </td>
                     

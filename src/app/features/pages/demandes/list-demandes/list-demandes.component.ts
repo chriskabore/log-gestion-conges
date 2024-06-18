@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DemandeService } from '../../../../services/demande.service';
 import { Demande } from '../../../../models/demande.model';
 import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { EditDemandesComponent } from '../edit-demandes/edit-demandes.component';
 
 @Component({
   selector: 'app-list-demandes',
@@ -15,6 +17,7 @@ export class ListDemandesComponent implements OnInit {
   constructor(
     private demandeService: DemandeService, 
     private router: Router,
+    private modal: NgbModal,
   ){
 
   }
@@ -53,6 +56,14 @@ export class ListDemandesComponent implements OnInit {
       error: (err: any) =>{
           console.log("Failed to delete!");
       }, 
+    });
+  }
+
+  async openEditDemande(demande?: Demande){
+    //this.router.navigate(['edit', demande.id]);
+    const currentModal = await this.modal.open(EditDemandesComponent, {size:'lg', backdrop:'static'});
+    currentModal.result.then((resp:any)=>{
+      console.log("RESPONSE FROM MODAL:", resp);
     });
   }
 }

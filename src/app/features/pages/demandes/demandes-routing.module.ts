@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListDemandesComponent } from './list-demandes/list-demandes.component';
 import { DetailsDemandesComponent } from './details-demandes/details-demandes.component';
+import { EditDemandesComponent } from './edit-demandes/edit-demandes.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path:'preview/:demandeId',
     component:DetailsDemandesComponent,
+  },
+  {
+    path:'edit/:demandeId',
+    component:EditDemandesComponent,
   }
 ];
 

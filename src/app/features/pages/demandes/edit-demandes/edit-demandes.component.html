@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-md-8 offset-2">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Editer une demande</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <label for="agent">Agent</label>
+                            <select name="agent" id="agent" class="form-select" value="det">
+                                <option disabled >Selectionner un agent</option>
+                                <option value="">Agent 1</option>
+                                <option value="">Agent 2</option>
+                                <option value="">Agent 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="dateDebut"> Date debut</label>
+                            <input id="dateDebut" type="date" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="dateFin"> Date fin</label>
+                            <input id="dateFin" type="date" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="motif">Motif</label>
+                            <textarea name="motif" id="motif" class="form-control" placeholder="Saisir le motif de la demande"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-danger"> Annuler</button>
+                    <button class="btn btn-success" type="submit"> Enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
