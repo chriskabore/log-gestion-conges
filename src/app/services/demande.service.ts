@@ -21,4 +21,14 @@ export class DemandeService {
     return this.httpClient.get<Demande[]>(API_URL+'/api/demandes');
    
   }
+
+  //fetches one demande from DB
+  findOne(demandeId: number ):Observable<Demande>{
+    return this.httpClient.get<Demande>(`${API_URL}/api/demandes/${demandeId}`);
+  }
+
+  // deletes a demande
+  deleteOne(demandeId: number ):Observable<any>{
+    return this.httpClient.delete<any>(`${API_URL}/api/demandes/${demandeId}`);
+  }
 }

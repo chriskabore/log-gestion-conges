@@ -19,7 +19,7 @@ export class AuthInterceptor implements HttpInterceptor {
     const token = this.authService.getToken();
     //const token = localStorage.getItem('JWT_TOKEN');
     console.log(token);
-    if(token !== null){
+    if(token !== null && !request.url.includes("/authenticate")){
       const authReq = request.clone({
         headers: request.headers.set("Authorization", "Bearer  "+ token),
       });

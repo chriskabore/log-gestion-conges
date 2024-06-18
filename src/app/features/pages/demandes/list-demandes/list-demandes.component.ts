@@ -43,4 +43,16 @@ export class ListDemandesComponent implements OnInit {
     }
     
   }
+
+  deleteDemande(id:number | undefined):void{
+    this.demandeService.deleteOne(id as number).subscribe({
+      next: (resp: any)=>{
+        console.log("Demande deleted!");
+        this.getDemandes();
+      }, 
+      error: (err: any) =>{
+          console.log("Failed to delete!");
+      }, 
+    });
+  }
 }
