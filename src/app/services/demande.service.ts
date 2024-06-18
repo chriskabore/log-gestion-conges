@@ -31,4 +31,15 @@ export class DemandeService {
   deleteOne(demandeId: number ):Observable<any>{
     return this.httpClient.delete<any>(`${API_URL}/api/demandes/${demandeId}`);
   }
+
+  //update
+
+  update(demande: Demande):Observable<Demande>{
+    return this.httpClient.put<Demande>(`${API_URL}/api/demandes/${demande.id}`, demande.id);
+  }
+
+  // create
+  create(demande: Demande):Observable<Demande>{
+    return this.httpClient.post<Demande>(`${API_URL}/api/demandes`, demande);
+  }
 }

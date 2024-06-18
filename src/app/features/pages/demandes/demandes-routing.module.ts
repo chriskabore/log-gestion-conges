@@ -13,10 +13,10 @@ const routes: Routes = [
     path:'preview/:demandeId',
     component:DetailsDemandesComponent,
   },
-  {
+  /*{
     path:'edit/:demandeId',
     component:EditDemandesComponent,
-  }
+  }*/
 ];
 
 @NgModule({

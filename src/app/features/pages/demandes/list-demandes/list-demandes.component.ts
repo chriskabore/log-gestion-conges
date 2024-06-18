@@ -62,8 +62,12 @@ export class ListDemandesComponent implements OnInit {
   async openEditDemande(demande?: Demande){
     //this.router.navigate(['edit', demande.id]);
     const currentModal = await this.modal.open(EditDemandesComponent, {size:'lg', backdrop:'static'});
+    currentModal.componentInstance.demande = demande;
     currentModal.result.then((resp:any)=>{
       console.log("RESPONSE FROM MODAL:", resp);
+      if(resp===true){
+        this.getDemandes();
+      }
     });
   }
 }
